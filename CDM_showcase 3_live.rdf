@@ -1,0 +1,322 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase/"
+     xml:base="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#ECAD_contains -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#ECAD_contains"/>
+    
+
+
+    <!-- http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#Materialfluss_contains -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#Materialfluss_contains"/>
+    
+
+
+    <!-- http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#contains -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#contains"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#ECAD_Teilbaum -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#ECAD_Teilbaum"/>
+    
+
+
+    <!-- http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#SichtTag -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#SichtTag"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#Area -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#Area">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#PSS"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#contains"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#Area"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#contains"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#ProductionLine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#ECAD -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#ECAD"/>
+    
+
+
+    <!-- http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#ECAD_ArticleReference -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#ECAD_ArticleReference">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#ECAD"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#ECAD_contains"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#ECAD_Connection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#ECAD_contains"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#ECAD_Function"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#ECAD_ConnPoint -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#ECAD_ConnPoint">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#ECAD"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#ECAD_Connection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#ECAD_Connection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#ECAD"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#ECAD_DeviceItem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#ECAD_DeviceItem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#ECAD"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#ECAD_contains"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#ECAD_ArticleReference"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#ECAD_Function -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#ECAD_Function">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#ECAD"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#ECAD_contains"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#ECAD_ConnPoint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#Enterprise -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#Enterprise">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#PSS"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#contains"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#Site"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#Materialfluss -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#Materialfluss"/>
+    
+
+
+    <!-- http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#Materialfluss_Bearbeitungsgerät -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#Materialfluss_Bearbeitungsgerät">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#Materialfluss"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#Materialfluss_Funktionsgruppe -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#Materialfluss_Funktionsgruppe">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#Materialfluss"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#Materialfluss_contains"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#Materialfluss_Bearbeitungsgerät"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#Materialfluss_contains"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#Materialfluss_NebenflussTransportförderer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#Materialfluss_contains"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#Materialfluss_Werker"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#Materialfluss_NebenflussTransportförderer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#Materialfluss_NebenflussTransportförderer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#Materialfluss"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#Materialfluss_Produktionslinie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#Materialfluss_Produktionslinie">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#Materialfluss"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#Materialfluss_contains"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#Materialfluss_Funktionsgruppe"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#Materialfluss_contains"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#Materialfluss_Transportförderer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#Materialfluss_Transportförderer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#Materialfluss_Transportförderer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#Materialfluss"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#Materialfluss_Werker -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#Materialfluss_Werker">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#Materialfluss"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#PSS -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#PSS"/>
+    
+
+
+    <!-- http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#ProductionLine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#ProductionLine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#PSS"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#contains"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#WorkCell"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#Resource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#Resource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#PSS"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#Site -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#Site">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#PSS"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#contains"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#Area"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#WorkCell -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#WorkCell">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#PSS"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#contains"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/zimmsan/ontologies/2024/6/CDM_showcase#Resource"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
